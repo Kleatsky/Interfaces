@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Quadcopter  quadcopter = new Quadcopter();
+            Console.WriteLine(quadcopter.GetInfo());
+            quadcopter.Charge();
+            Console.WriteLine(quadcopter.GetRobotType());
+            Console.WriteLine(String.Join(", ", quadcopter.GetComponents()));
         }
     }
 }
